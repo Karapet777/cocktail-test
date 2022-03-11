@@ -16,6 +16,7 @@ export const usersSlice = createSlice({
   initialState,
   reducers: {
     signin: (state, action: PayloadAction<Iusers>) => {
+      // eslint-disable-next-line array-callback-return
       const isAuthorized = state.users.find((userItem) => {
         if (action.payload.email === userItem.email) {
           return true;
@@ -35,6 +36,7 @@ export const usersSlice = createSlice({
       }
     },
     login: (state, action: PayloadAction<ICridentialLogin>) => {
+      // eslint-disable-next-line array-callback-return
       const isUser = state.users.find((userItem) => {
         if (action.payload.email === userItem.email) {
           return true;
@@ -54,6 +56,7 @@ export const usersSlice = createSlice({
     logoutUser: (state) => {
       state.token = false;
       state.errorText = "";
+      // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
       state.CurrentUser = <ICridentialLogin>[];
       localStorage.setItem("Token", JSON.stringify(state.token));
       localStorage.setItem("Current_User", JSON.stringify(state.CurrentUser));
