@@ -9,6 +9,14 @@ const translationsEn = {
   name: "Name",
   glass: "Glass",
   type: "Type",
+  submit: "Submit",
+  GoSignin: "Go signin",
+  Password: "Password",
+  Email: "Email",
+  userName: "Name",
+  noPasswordProvided: "No password provided",
+  signin: "Signin",
+  ToLogin: "To login",
 };
 const translationsAm = {
   Login: "Մուտք",
@@ -18,6 +26,14 @@ const translationsAm = {
   name: "Անվանում",
   galss: "Բաժակ",
   type: "Տեսակ",
+  submit: "Գրանցվել",
+  GoSignin: "Դեպի գրանցման էջ",
+  Password: "Ծածկագիր",
+  Email: "էլ.փոստ հասցե",
+  userName: "Անուն",
+  noPasswordProvided: "Գաղտնաբառ չի տրամադրվել",
+  signin: "Գրանցվել",
+  ToLogin: "Դեպի մուտքի էջ",
 };
 
 i18n.use(initReactI18next).init({

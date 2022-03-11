@@ -22,6 +22,7 @@ const CardCoctail: FC<IProps> = ({
     InfoCoctailBlock,
     WrapperCardCoctail,
     InfoBlock,
+    NextIcon,
   } = stylesCardCoctail;
   const { t } = useTranslation();
 
@@ -51,7 +52,7 @@ const CardCoctail: FC<IProps> = ({
           alt="likeIcon"
           onClick={() => addCoctailToHistory()}
         />
-        <LikeIcon
+        <NextIcon
           src={nextIcon}
           alt="nextIcon"
           onClick={() => newRandomCoctailInModal()}

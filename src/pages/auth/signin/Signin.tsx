@@ -6,6 +6,7 @@ import Input from "../../../containers/input/Input";
 import { StyleSignin } from "./Signin.style.component";
 import { useSignin } from "./useSignin";
 import { SigninSchema } from "./validationSchema";
+import { useTranslation } from "react-i18next";
 
 interface IProps {
   toggleChengePage: () => void;
@@ -14,6 +15,7 @@ interface IProps {
 const Signin: FC<IProps> = ({ toggleChengePage }) => {
   const { BlockInput, Title, Wrapper } = StyleSignin;
   const { errorText, handleSubmit, initialValues } = useSignin();
+  const { t } = useTranslation();
 
   return (
     <Wrapper>
@@ -26,7 +28,7 @@ const Signin: FC<IProps> = ({ toggleChengePage }) => {
           return (
             <form onSubmit={handleSubmit}>
               <BlockInput>
-                <Title>Signin</Title>
+                <Title>{t("signin")}</Title>
                 {errorText && <ErrorText textError={errorText} />}
                 <Input
                   type="text"
@@ -34,7 +36,7 @@ const Signin: FC<IProps> = ({ toggleChengePage }) => {
                   onChange={handleChange}
                   name="name"
                   onBlur={handleBlur}
-                  placeholder="Name"
+                  placeholder={t("userName")}
                 />
                 <ErrorMessage
                   name="name"
@@ -46,7 +48,7 @@ const Signin: FC<IProps> = ({ toggleChengePage }) => {
                   onChange={handleChange}
                   name="email"
                   onBlur={handleBlur}
-                  placeholder="Email"
+                  placeholder={t("Email")}
                 />
                 <ErrorMessage
                   name="email"
@@ -55,7 +57,7 @@ const Signin: FC<IProps> = ({ toggleChengePage }) => {
                 <Input
                   type="password"
                   name="password"
-                  placeholder="Password"
+                  placeholder={t("Password")}
                   onChange={handleChange}
                   onBlur={handleBlur}
                   value={values.password}
@@ -65,8 +67,8 @@ const Signin: FC<IProps> = ({ toggleChengePage }) => {
                   render={(msg) => <ErrorText textError={msg} />}
                 />
 
-                <Button type="submit" title="Signin" />
-                <Button onClick={toggleChengePage} title="To Login" />
+                <Button type="submit" title={t("signin")} />
+                <Button onClick={toggleChengePage} title={t("ToLogin")} />
               </BlockInput>
               ;
             </form>

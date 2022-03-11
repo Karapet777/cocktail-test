@@ -31,6 +31,10 @@ export const stylesCardCoctail = {
     width: 60px;
     object-fit: cover;
   `,
+  NextIcon: styled.img`
+    width: 60px;
+    object-fit: cover;
+  `,
   InfoCoctailBlock: styled.div`
     background: coral;
     border-radius: 15px;

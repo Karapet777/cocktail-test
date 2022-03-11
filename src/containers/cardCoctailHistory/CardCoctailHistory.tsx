@@ -14,7 +14,7 @@ const CardCoctailHistory: FC<IProps> = ({
   return (
     <WrapperCardHistory>
       <div>
-        <ImgCardHistory className="imgCardHistory" src={src} alt={name} />
+        <ImgCardHistory src={src} alt={name} />
       </div>
       <div>
         <p>Name -{name}</p>
@@ -23,7 +23,6 @@ const CardCoctailHistory: FC<IProps> = ({
       </div>
       <div>
         <FaRegTrashAlt onClick={deleteCoctailHandle} />
-        {/* <button onClick={deleteCoctailHandle}>delete</button> */}
       </div>
     </WrapperCardHistory>
   );

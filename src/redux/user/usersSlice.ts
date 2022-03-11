@@ -45,7 +45,7 @@ export const usersSlice = createSlice({
         state.CurrentUser = action.payload;
         state.errorText = "";
       } else {
-        state.errorText = "ogtater goyutyun chuni";
+        state.errorText = "Էլեկտրոնային փոստը  գոյություն ունի";
         state.token = false;
       }
       localStorage.setItem("Token", JSON.stringify(state.token));

@@ -38,7 +38,7 @@ const Login: FC<IProps> = ({ toggleChengePage }) => {
                     onChange={handleChange}
                     name="email"
                     onBlur={handleBlur}
-                    placeholder="Email"
+                    placeholder={t("Email")}
                   />
                   <ErrorMessage
                     name="email"
@@ -47,7 +47,7 @@ const Login: FC<IProps> = ({ toggleChengePage }) => {
                   <Input
                     type="password"
                     name="password"
-                    placeholder="Password"
+                    placeholder={t("Password")}
                     onChange={handleChange}
                     onBlur={handleBlur}
                     value={values.password}
@@ -56,8 +56,8 @@ const Login: FC<IProps> = ({ toggleChengePage }) => {
                     name="password"
                     render={(msg) => <ErrorText textError={msg} />}
                   />
-                  <Button type="submit" title="submit" />
-                  <Button onClick={toggleChengePage} title="To Signin" />
+                  <Button type="submit" title={t("submit")} />
+                  <Button onClick={toggleChengePage} title={t("GoSignin")} />
                 </BlockInput>
               </form>
             </>

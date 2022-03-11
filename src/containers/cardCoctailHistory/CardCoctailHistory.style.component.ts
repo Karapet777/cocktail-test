@@ -15,7 +15,7 @@ export const CardCoctailHistoryStyle = {
     max-width: 100px;
     border-radius: 50px;
   `,
-  WrapperCardHistory: styled.img`
+  WrapperCardHistory: styled.div`
     padding: 10px;
     margin: 10px;
     display: flex;
